@@ -4,9 +4,13 @@
     box-sizing: border-box;
 }
 nav{
-    background-color: burlywood;
+    background-color: white;
     padding: 1em;
-}
+    max-height: min-content;
+    }
+    body{
+        background-color: burlywood;
+    }
 nav ul li{
     list-style-type: none;
     padding: 1em;
@@ -15,13 +19,23 @@ nav ul li{
     size: 3em;
 }
 .container{
-    display: flex;
-    padding: 2em;
+    display: grid;
+    grid-template-columns: 0.3fr 2.5fr;
+    grid-template-rows: 0.5fr 0.6fr 0.8fr;
+                        
+    grid-gap: 1em;
+    padding: 1em;
 }
 .arrow{
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 10px;
+    right: 10px;
+}
+.about{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    height: 10vh;
+    
 }
 #profile{
     max-width: 70vw;
@@ -31,7 +45,39 @@ nav ul li{
     background-color: black;
     color: white;
     display: flex;
+    padding: 1em;
     flex-direction: column;
     align-items: center;
     max-width: 50vw;
+    line-height: 2em;
 }
+#resume img{
+    max-width: 30vw;
+    max-height: 70vh;
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+i{
+    color: blue;
+    font-size: 2em;
+}
+#contact{
+   background-color:brown;
+   color: white;
+   max-width: 50vw;
+}
+#contact .fab, #contact .fas{
+    color: black;
+}
+#growth{
+    background-color: white;
+    max-width: 50vw;
+}
+#growth ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4, 1fr);
+    }
